@@ -66,11 +66,6 @@ int main() {
 
   std::cout << "Hello and Welcome to meterAnalysis" << std::endl;
 
-  // ------BEGIN TEST ------
-  std::string str = "wassup";
-  std::cout << str[str.length() - 1] << " and " << str[str.length() -2] << std::endl;
-  // ------ END TEST -------
-
   while(true){   // loop to take values from user until the user entes "0" to terminate
 
     std::string input_value = "NULL";
