@@ -11,55 +11,55 @@
 std::vector<std::string> words;
 
 // takes the word specified in wordNumber and returns what percent of the word list it rhymes with
-float findRhyme(int word_number) {
+float findRhyme(unsigned int word_number) {
 
   std::string word_checked_against = words[word_number];
-  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length() - 1];
-  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length() - 2];
+  char word_checked_against_lastletter = word_checked_against[word_checked_against.length() - 1];
+  char word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length() - 2];
 
-  int numberOfRhymes = 0;
+  int number_of_rhymes = 0;
 
-  for(int i = 0; i < words.size(); ++i){
+  for(unsigned int i = 0; i < words.size(); ++i){
 
-    if(i) == word_number){    // skips checking for rhyme if the word we are checking is the word we are checking against
+    if(i == word_number){    // skips checking for rhyme if the word we are checking is the word we are checking against
       continue;
     }
 
     std::string word_being_checked = words[i];
-    std::string word_being_checked_lastletter = word_being_checked[word_being_checked.length() - 1];
-    std::string word_being_checked_2ndtolastletter = word_being_checked[word_being_checked.length() - 2];
+    char word_being_checked_lastletter = word_being_checked[word_being_checked.length() - 1];
+    char word_being_checked_2ndtolastletter = word_being_checked[word_being_checked.length() - 2];
 
     if(word_being_checked_lastletter == word_checked_against_lastletter &&  word_being_checked_2ndtolastletter == word_checked_against_2ndtolastletter) {
-      ++NumberOfRhymes;
+      ++number_of_rhymes;
     }
   }
-  return numberOfRhymes / words.size();
+  return number_of_rhymes / words.size();
 }
 
 // takes the word specified in wordNumber and returns what percent of the word list it is an alliteration with
-float findAlliteration(int word_number) {
+float findAlliteration(unsigned int word_number) {
 
   std::string word_checked_against = words[word_number];
-  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length() - 1];
-  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length() - 2];
+  char word_checked_against_firstletter = word_checked_against[0];
+  char word_checked_against_2ndletter = word_checked_against[1];
 
-  int numberOfAlliterations = 0;
+  int number_of_alliterations = 0;
 
-  for(int i = 0; i < words.size(); ++i){
+  for(unsigned int i = 0; i < words.size(); ++i){
 
-    if(i) == word_number){    // skips checking for rhyme if the word we are checking is the word we are checking against
+    if(i == word_number){    // skips checking for rhyme if the word we are checking is the word we are checking against
       continue;
     }
 
     std::string word_being_checked = words[i];
-    std::string word_being_checked_lastletter = word_being_checked[0];
-    std::string word_being_checked_2ndtolastletter = word_being_checked[1];
+    char word_being_checked_firstletter = word_being_checked[0];
+    char word_being_checked_2ndletter = word_being_checked[1];
 
-    if(word_being_checked_lastletter == word_checked_against_lastletter &&  word_being_checked_2ndtolastletter == word_checked_against_2ndtolastletter) {
-      ++numberOfAlliterations;
+    if(word_being_checked_firstletter == word_checked_against_firstletter &&  word_being_checked_2ndletter == word_checked_against_2ndletter) {
+      ++number_of_alliterations;
     }
   }
-  return numberOfAlliterations / words.size();
+  return number_of_alliterations / words.size();
 }
 
 int main() {
