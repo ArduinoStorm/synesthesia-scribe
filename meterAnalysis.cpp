@@ -26,8 +26,8 @@ float findRhyme(int word_number) {
     }
 
     std::string word_being_checked = words[i];
-    std::string word_being_checked_lastletter = word_being_checked[word_being_checked.length - 1];
-    std::string word_being_checked_2ndtolastletter = word_being_checked[word_being_checked.length - 2];
+    std::string word_being_checked_lastletter = word_being_checked[word_being_checked.length() - 1];
+    std::string word_being_checked_2ndtolastletter = word_being_checked[word_being_checked.length() - 2];
 
     if(word_being_checked_lastletter == word_checked_against_lastletter &&  word_being_checked_2ndtolastletter == string word_checked_against_2ndtolastletter) {
       ++NumberOfRhymes;
@@ -40,8 +40,8 @@ float findRhyme(int word_number) {
 float findAlliteration(int word_number) {
 
   std::string word_checked_against = words[word_number];
-  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length - 1];
-  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length - 2];
+  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length() - 1];
+  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length() - 2];
 
   int numberOfAlliterations = 0;
 
