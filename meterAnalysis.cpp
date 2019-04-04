@@ -14,8 +14,8 @@ std::vector<std::string> words;
 float findRhyme(int word_number) {
 
   std::string word_checked_against = words[word_number];
-  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length - 1];
-  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length - 2];
+  std::string word_checked_against_lastletter = word_checked_against[word_checked_against.length() - 1];
+  std::string word_checked_against_2ndtolastletter = word_checked_against[word_checked_against.length() - 2];
 
   int numberOfRhymes = 0;
 
